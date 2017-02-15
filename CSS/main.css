@@ -1,0 +1,6 @@
+.nav {
+  background-image: url("../image/sidebar-bg.jpg");
+}
+.nav > li > a {
+  text-align: center;
+}
