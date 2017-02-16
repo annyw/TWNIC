@@ -2,83 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
     <title>Title</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./CSS/main.less">
+    <link rel="stylesheet" href="./CSS/main.css">
 </head>
 <body>
-    <div class="row">
-
         <!--navigation-->
-        <div class="col-md-3">
-            <ul class="nav">
-                <li>
-                    <a href="">
-                        <img src="./image/logo.png" alt="">
-                        <div>台灣網路基礎建設概要
-                            Internet Infrastructure in Taiwan:
+            <div class="sidebar">
+                <a class="logo" href="">
+                    <img src="./image/logo.svg" alt="">
+                    <div class="logo-text">
+                        <span>台灣網路基礎建設概要</span>
+                        <div>Internet Infrastructure in Taiwan:
                             A Monthly Summary</div>
-                    </a>
+                    </div>
+                </a>
+                <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-                </li>
-                <li>
-                    <a href="#">
-                        <div>「.tw/.台灣」網域名稱註冊數量統計</div>
-                        <div> .tw/.台灣 Domain Names </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="active" href="#">
-                        <div>IP位址及AS號碼數量統計</div>
-                        <div>IP Addresses and AS Numbers</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>.tw WWW Serve數量統計 </div>
-                        <div>.tw WWW Servers</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>連線頻寬統計</div>
-                        <div>Internet Connection Bandwidth</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>上網人口及家戶數統計 </div>
-                        <div>Internet Users and Households with Internet Access</div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-9">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>IP位址及AS號碼數量統計</h3>
-                    <h5>IP Addresses and AS Numbers </h5>
+                <div class=" menu-list" >
+                    <ul class="menu collapse" id="collapse">
+                        <li>
+                            <a href="#">
+                                <span>「.tw/.台灣」網域名稱註冊數量統計</span>
+                                <div class="menu-xs"> .tw/.台灣 Domain Names </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">
+                                <span>IP位址及AS號碼數量統計</span>
+                                <div class="menu-xs">IP Addresses and AS Numbers</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>.tw WWW Serve數量統計</span>
+                                <div class="menu-en">.tw WWW Servers</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span> 連線頻寬統計</span>
+                                <div class="menu-xs">Internet Connection Bandwidth</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>上網人口及家戶數統計</span>
+                                <div class="menu-xs">Internet Users and Households with Internet Access</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="print">
+                                <img src="./image/print-icon.png" alt="" style="width: 16px; height: auto">
+                                    友善列印
+                            </a>
+                            <div class="menu-xs">資料更新日期：2016/01</div>
+
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./image/chart.jpg" alt="" style="width: 100%;">
-                </div>
-                <div class="col-md-5">
-                    <p>網際網路通訊協定位址(Internet Protocol Address)是用來辨識網際網路上主機位
-                        置所在，以固定且唯一的一串數字位址分配予主機。台灣IP位址核發數量，在
-                        IPv4位址發放數量統計上，台灣居全球第15名; IPv6位址發放數量為全球第18名。
-                        Internet Protocol Address is a numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication.
-                        The allocations of IPv4 and IPv6 addresses are shown in Figure 4 and Figure 5. In the global ranking of IPv4 and IPv6 allocations, Taiwan ranks the 13th and 17th respectively. </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <div class="col-md-9 col-md-offset-3 content">
+            <article>
+                <div class="row block">
+                    <div class="col-md-12">
+                        <div class="article-title">
+                            <h3>IP位址及AS號碼數量統計</h3>
+                            <h5>IP Addresses and AS Numbers </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row block">
+                    <div class="col-md-6">
+                        <img src="./image/chart.jpg" alt="" style="width: 100%;">
+                        <img src="./image/chart.jpg" alt="" style="width: 100%;">
+                    </div>
+                    <div class="col-md-5">
+                        <p>網際網路通訊協定位址(Internet Protocol Address)是用來辨識網際網路上主機位
+                            置所在，以固定且唯一的一串數字位址分配予主機。台灣IP位址核發數量，在
+                            IPv4位址發放數量統計上，台灣居全球第15名; IPv6位址發放數量為全球第18名。
+                        </p>
+                        <p>
+                            Internet Protocol Address is a numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication.
+                            The allocations of IPv4 and IPv6 addresses are shown in Figure 4 and Figure 5. In the global ranking of IPv4 and IPv6 allocations, Taiwan ranks the 13th and 17th respectively. </p>
+                    </div>
+                </div>
+                <div class="row block">
+                    <div class="col-md-6">
+                        <img src="./image/chart.jpg" alt="" style="width: 100%;">
+                    </div>
+                    <div class="col-md-5">
+                        <p>自治系統號碼(ASN)是一個提供自治系統(AS)間交換動態路由資訊的唯一識別碼，截至105年11月國內自治系統號碼核發數為345個。
+                        </p>
+                        <p>
+                            Autonomous System Numbers (ASN) are unique identifiers for a collection of networks, or routers that share a common set of routing policies.
+                            As of November 2016 the total number of AS Numbers was 345 (See Figure 6)</p>
+                    </div>
+                </div>
+            </article>
+
+            <footer>
+                <div class="footer-content row">
+                    <div class="col-md-3">
+                        <img src="./image/logo-b.svg" alt="">
+                        <div class="footer-contact">
+                            <p>財團法人台灣網路資訊中心
+                                <br>臺北市羅斯福路二段9號4樓之2
+                                <br>Tel：+886-2-2341-3300
+                            <br>Fax：+886-2-2396-8832
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="footer-intro">
+                            <p>台灣網路資訊中心以台灣網路基礎建設為主軸，進行長期與系統性之調查與研究，彙集重要統計資訊，並統整TWNIC核心業務DN、IP相關統計數據，協助民眾快速了解我國網路重要數據，掌握我國網路使用現況與整體發展。
+                                <br>The Taiwan Network Information Center (TWNIC) conducts surveys and researches on Taiwan’s Internet infrastructure on a long term basis, bringing together important statistics on the use of the Internet.
+                                <br>Combined with TWNIC’s core businesses, such as statistics of domain name registrations and IP address allocations, “Internet Infrastructure in Taiwan: A Monthly Summary” aims to help the public learn more about the current development of the Internet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>
