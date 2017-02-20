@@ -3,9 +3,9 @@ body {
   line-height: 1.5;
   font-family: "Noto Sans TC", "Open Sans", "PingFang TC", "Heiti TC", "微軟正黑體", sans-serif;
 }
-body .sidebar {
+.sidebar {
   overflow: auto;
-  top: 0px;
+  top: 0;
   height: 100%;
   text-align: center;
   position: fixed;
@@ -13,84 +13,87 @@ body .sidebar {
   background: url("../image/sidebar-bg.jpg") no-repeat;
   background-size: cover;
 }
-body .sidebar .logo {
+.sidebar .logo {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   margin-top: 30px;
   display: block;
 }
-body .sidebar .logo .logo-text {
+.sidebar .logo .logo-text {
   margin-top: 10px;
 }
-body .sidebar .navbar-toggle {
+.sidebar .logo .logo-text h1 {
+  font-size: 26px;
+}
+.sidebar .navbar-toggle {
   display: none;
 }
-body .sidebar .navbar-toggle .icon-bar {
+.sidebar .navbar-toggle .icon-bar {
   width: 22px;
   height: 2px;
   background-color: #fff;
   display: block;
 }
-body .sidebar .navbar-toggle .icon-bar + .icon-bar {
+.sidebar .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-body .sidebar .menu {
+.sidebar .menu {
   padding: 0;
 }
-body .sidebar .menu > li {
+.sidebar .menu > li {
   text-align: center;
   list-style: none;
   padding: 12px 35px;
 }
-body .sidebar .menu > li:first-child {
+.sidebar .menu > li:first-child {
   max-width: 100%;
   margin: 30px 0 0;
 }
-body .sidebar .menu > li:first-child a .logo-text {
+.sidebar .menu > li:first-child a .logo-text {
   font-size: 14px;
   margin-top: 10px;
   font-weight: 300;
 }
-body .sidebar .menu > li:last-child {
+.sidebar .menu > li:last-child {
   margin-top: 40px;
 }
-body .sidebar .menu > li:last-child div {
+.sidebar .menu > li:last-child div {
   color: #fff;
 }
-body .sidebar .menu > li:last-child .print {
+.sidebar .menu > li:last-child .print {
   cursor: pointer;
   margin-bottom: 10px;
 }
-body .sidebar .menu > li a.print,
-body .sidebar .menu > li a .logo-text {
+.sidebar .menu > li a.print,
+.sidebar .menu > li a .logo-text {
   color: rgba(255, 255, 255, 0.9);
   font-weight: normal;
 }
-body .sidebar .menu > li a.print:focus,
-body .sidebar .menu > li a .logo-text:focus,
-body .sidebar .menu > li a.print:hover,
-body .sidebar .menu > li a .logo-text:hover {
+.sidebar .menu > li a.print:focus,
+.sidebar .menu > li a .logo-text:focus,
+.sidebar .menu > li a.print:hover,
+.sidebar .menu > li a .logo-text:hover {
   color: rgba(255, 255, 255, 0.9);
 }
-body .sidebar .menu > li > a {
+.sidebar .menu > li > a {
   text-align: center;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.5;
   font-weight: bold;
   font-size: 15px;
 }
-body .sidebar .menu > li > a:focus,
-body .sidebar .menu > li > a:hover {
+.sidebar .menu > li > a:focus,
+.sidebar .menu > li > a:hover {
   background-color: transparent;
   color: #ffffff;
   text-decoration: none;
 }
-body .sidebar .menu > li > a.active {
+.sidebar .menu > li.active a {
   color: #fff;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
-body .sidebar .menu > li > a.active span:after {
+.sidebar .menu > li.active a span:after {
   background-color: #fff;
   content: '';
   height: 1px;
@@ -101,53 +104,56 @@ body .sidebar .menu > li > a.active span:after {
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
   margin-top: 10px;
 }
-body .sidebar .menu > li .menu-xs {
+.sidebar .menu > li .menu-xs {
   font-size: 13px;
 }
-body .content {
+.content {
   background-image: url('../image/background.jpg');
   background-size: cover;
 }
-body .content article .article-title {
+.content article .article-title {
   margin: 30px 0;
 }
-body .content article .article-title h3 {
+.content article .article-title h3 {
   font-size: 30px;
 }
-body .content article .article-title h5 {
+.content article .article-title h5 {
   font-size: 20px;
   font-weight: 300;
 }
-body .content article .article-title h3,
-body .content article .article-title h5 {
+.content article .article-title h3,
+.content article .article-title h5 {
   color: #222222;
 }
-body .content article p {
+.content article p {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 1px;
   color: #4a4a4a;
 }
-body .content article img {
+.content article img {
   margin-bottom: 20px;
 }
-body .content article .block {
+.content article .block {
   margin-bottom: 30px;
   margin-left: 15px;
 }
-body .content footer .footer-content {
+.content article .chart {
+  margin-bottom: 20px;
+}
+.content footer .footer-content {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 50px;
   padding-bottom: 40px;
   margin-top: 100px;
 }
-body .content footer .footer-content .footer-contact {
+.content footer .footer-content .footer-contact {
   opacity: 0.9;
   font-size: 13px;
   color: #4a4a4a;
   margin-top: 20px;
 }
-body .content footer .footer-content .footer-intro {
+.content footer .footer-content .footer-intro {
   font-size: 13px;
   line-height: 1.8;
   color: #4a4a4a;
@@ -158,27 +164,27 @@ body .content footer .footer-content .footer-intro {
   }
 }
 @media (max-width: 991px) {
-  body .sidebar {
+  .sidebar {
     position: relative;
     width: 100%;
   }
-  body .sidebar .menu-list .menu {
+  .sidebar .menu-list .menu {
     border-top: 1px solid rgba(54, 158, 168, 0.5);
   }
-  body .sidebar .menu-list .menu li a.active span:after {
+  .sidebar .menu-list .menu li a.active span:after {
     display: none;
   }
-  body .sidebar .logo {
+  .sidebar .logo {
     margin: 20px 30px;
     text-align: left;
   }
-  body .sidebar .logo img {
+  .sidebar .logo img {
     height: 60px;
   }
-  body .sidebar .logo .logo-text {
+  .sidebar .logo .logo-text {
     display: none;
   }
-  body .sidebar .navbar-toggle {
+  .sidebar .navbar-toggle {
     display: block;
     position: absolute;
     right: 10px;
@@ -188,17 +194,17 @@ body .content footer .footer-content .footer-intro {
     padding: 10px;
     border-radius: 2px;
   }
-  body .sidebar .navbar-toggle:focus {
+  .sidebar .navbar-toggle:focus {
     outline: none;
     background-color: #369EA8;
   }
-  body .content article .block {
+  .content article .block {
     margin: 30px 0;
   }
-  body .content footer {
+  .content footer {
     text-align: center;
   }
-  body .content footer .footer-intro {
+  .content footer .footer-intro {
     margin-top: 20px;
   }
 }
