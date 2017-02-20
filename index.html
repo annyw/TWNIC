@@ -3,139 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
-    <title>Title</title>
+    <title>Twnic 台灣網路基礎建設概要</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-        <!--navigation-->
-            <div class="sidebar">
-                <a class="logo" href="">
-                    <img src="./image/logo.svg" alt="">
-                    <div class="logo-text">
-                        <span>台灣網路基礎建設概要</span>
-                        <div>Internet Infrastructure in Taiwan:
-                            A Monthly Summary</div>
-                    </div>
-                </a>
-                <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <div class=" menu-list" >
-                    <ul class="menu collapse" id="collapse">
-                        <li>
-                            <a href="#">
-                                <span>「.tw/.台灣」網域名稱註冊數量統計</span>
-                                <div class="menu-xs"> .tw/.台灣 Domain Names </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="active" href="#">
-                                <span>IP位址及AS號碼數量統計</span>
-                                <div class="menu-xs">IP Addresses and AS Numbers</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>.tw WWW Serve數量統計</span>
-                                <div class="menu-en">.tw WWW Servers</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span> 連線頻寬統計</span>
-                                <div class="menu-xs">Internet Connection Bandwidth</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span>上網人口及家戶數統計</span>
-                                <div class="menu-xs">Internet Users and Households with Internet Access</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="print">
-                                <img src="./image/print-icon.png" alt="" style="width: 16px; height: auto">
-                                    友善列印
-                            </a>
-                            <div class="menu-xs">資料更新日期：2016/01</div>
-
-                        </li>
-                    </ul>
+<!--navigation-->
+<div class="sidebar">
+    <div class="container-fluid">
+        <a class="logo" href="">
+            <img src="./image/logo.svg" alt="">
+            <div class="logo-text">
+                <span>台灣網路基礎建設概要</span>
+                <div>Internet Infrastructure in Taiwan:
+                    A Monthly Summary
                 </div>
             </div>
+        </a>
+        <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
 
-        <div class="col-md-9 col-md-offset-3 content">
-            <article>
-                <div class="row block">
-                    <div class="col-md-12">
-                        <div class="article-title">
-                            <h3>IP位址及AS號碼數量統計</h3>
-                            <h5>IP Addresses and AS Numbers </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="row block">
-                    <div class="col-md-6">
-                        <img src="./image/chart.jpg" alt="" style="width: 100%;">
-                        <img src="./image/chart.jpg" alt="" style="width: 100%;">
-                    </div>
-                    <div class="col-md-5">
-                        <p>網際網路通訊協定位址(Internet Protocol Address)是用來辨識網際網路上主機位
-                            置所在，以固定且唯一的一串數字位址分配予主機。台灣IP位址核發數量，在
-                            IPv4位址發放數量統計上，台灣居全球第15名; IPv6位址發放數量為全球第18名。
-                        </p>
-                        <p>
-                            Internet Protocol Address is a numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication.
-                            The allocations of IPv4 and IPv6 addresses are shown in Figure 4 and Figure 5. In the global ranking of IPv4 and IPv6 allocations, Taiwan ranks the 13th and 17th respectively. </p>
-                    </div>
-                </div>
-                <div class="row block">
-                    <div class="col-md-6">
-                        <img src="./image/chart.jpg" alt="" style="width: 100%;">
-                    </div>
-                    <div class="col-md-5">
-                        <p>自治系統號碼(ASN)是一個提供自治系統(AS)間交換動態路由資訊的唯一識別碼，截至105年11月國內自治系統號碼核發數為345個。
-                        </p>
-                        <p>
-                            Autonomous System Numbers (ASN) are unique identifiers for a collection of networks, or routers that share a common set of routing policies.
-                            As of November 2016 the total number of AS Numbers was 345 (See Figure 6)</p>
-                    </div>
-                </div>
-            </article>
-
-            <footer>
-                <div class="footer-content row">
-                    <div class="col-md-3">
-                        <img src="./image/logo-b.svg" alt="">
-                        <div class="footer-contact">
-                            <p>財團法人台灣網路資訊中心
-                                <br>臺北市羅斯福路二段9號4樓之2
-                                <br>Tel：+886-2-2341-3300
-                            <br>Fax：+886-2-2396-8832
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="footer-intro">
-                            <p>台灣網路資訊中心以台灣網路基礎建設為主軸，進行長期與系統性之調查與研究，彙集重要統計資訊，並統整TWNIC核心業務DN、IP相關統計數據，協助民眾快速了解我國網路重要數據，掌握我國網路使用現況與整體發展。
-                                <br>The Taiwan Network Information Center (TWNIC) conducts surveys and researches on Taiwan’s Internet infrastructure on a long term basis, bringing together important statistics on the use of the Internet.
-                                <br>Combined with TWNIC’s core businesses, such as statistics of domain name registrations and IP address allocations, “Internet Infrastructure in Taiwan: A Monthly Summary” aims to help the public learn more about the current development of the Internet.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </footer>
+        <div class=" menu-list">
+            <ul class="menu collapse" id="collapse">
+                <li>
+                    <a href="#">
+                        <span>「.tw/.台灣」網域名稱註冊數量統計</span>
+                        <div class="menu-xs"> .tw/.台灣 Domain Names</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="#">
+                        <span>IP位址及AS號碼數量統計</span>
+                        <div class="menu-xs">IP Addresses and AS Numbers</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>.tw WWW Serve數量統計</span>
+                        <div class="menu-en">.tw WWW Servers</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span> 連線頻寬統計</span>
+                        <div class="menu-xs">Internet Connection Bandwidth</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>上網人口及家戶數統計</span>
+                        <div class="menu-xs">Internet Users and Households with Internet Access</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="print hidden-sm hidden-xs">
+                        <img src="./image/print-icon.png" alt="" style="width: 16px; height: auto">
+                        友善列印
+                    </a>
+                    <div class="menu-xs">資料更新日期：2016/01</div>
+                </li>
+            </ul>
         </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </div>
+</div>
+
+<div class="col-md-9 col-md-offset-3 content">
+    <article>
+        <div class="row block">
+            <div class="col-md-12">
+                <div class="article-title">
+                    <h3>IP位址及AS號碼數量統計</h3>
+                    <h5>IP Addresses and AS Numbers </h5>
+                </div>
+            </div>
+        </div>
+        <div class="row block">
+            <div class="col-lg-8 col-md-7">
+                <div id="myfirstchart">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div>
+                    圖4：台灣IPv4位址數量統計（單位：個）<br>Figure4：Number of IPv4 Addresses
+                </div>
+                <img src="./image/chart.jpg" alt="" style="width: 100%;">
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>網際網路通訊協定位址(Internet Protocol Address)是用來辨識網際網路上主機位
+                    置所在，以固定且唯一的一串數字位址分配予主機。台灣IP位址核發數量，在
+                    IPv4位址發放數量統計上，台灣居全球第15名; IPv6位址發放數量為全球第18名。
+                </p>
+                <p>
+                    Internet Protocol Address is a numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication.
+                    The allocations of IPv4 and IPv6 addresses are shown in Figure 4 and Figure 5. In the global ranking of IPv4 and IPv6 allocations, Taiwan ranks the 13th and 17th respectively. </p>
+            </div>
+        </div>
+        <div class="row block">
+            <div class="col-lg-8 col-md-7">
+                <img src="./image/chart.jpg" alt="" style="width: 100%;">
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>自治系統號碼(ASN)是一個提供自治系統(AS)間交換動態路由資訊的唯一識別碼，截至105年11月國內自治系統號碼核發數為345個。
+                </p>
+                <p>
+                    Autonomous System Numbers (ASN) are unique identifiers for a collection of networks, or routers that share a common set of routing policies.
+                    As of November 2016 the total number of AS Numbers was 345 (See Figure 6)</p>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content row">
+            <div class="col-md-3">
+                <img src="./image/logo-b.svg" alt="">
+                <div class="footer-contact">
+                    <p>財團法人台灣網路資訊中心
+                        <br>臺北市羅斯福路二段9號4樓之2
+                        <br>Tel：+886-2-2341-3300
+                        <br>Fax：+886-2-2396-8832
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="footer-intro">
+                    <p>台灣網路資訊中心以台灣網路基礎建設為主軸，進行長期與系統性之調查與研究，彙集重要統計資訊，並統整TWNIC核心業務DN、IP相關統計數據，協助民眾快速了解我國網路重要數據，掌握我國網路使用現況與整體發展。
+                        <br>The Taiwan Network Information Center (TWNIC) conducts surveys and researches on Taiwan’s Internet infrastructure on a long term basis, bringing together important statistics on the use of the Internet.
+                        <br>Combined with TWNIC’s core businesses, such as statistics of domain name registrations and IP address allocations, “Internet Infrastructure in Taiwan: A Monthly Summary” aims to help the public learn more about the current development of the Internet.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
+<!-- Chart.js -->
+<script>
+    var ctx = document.getElementById("myChart").getContext("2d");
+
+    var chartHeight = $(window).height() / 6;
+
+    var gradient = ctx.createLinearGradient(0, chartHeight, 0, chartHeight * 2);
+    gradient.addColorStop(0, 'rgba(151, 204, 70, 1)');
+    gradient.addColorStop(1, 'rgba(11, 118, 50, 1)');
+
+    var data = {
+        labels: ["2006/12", "2007/12", "2008/12", "2009/12", "2010/12", "2011/12", "2012/12", "2013/12", "2014/12", "2015/12", "2016/12"],
+        datasets: [
+            {
+                fillColor  : gradient, // Put the gradient here as a fill color
+                data: [17888000, 19832576, 24004864, 27102208, 31925760, 35381504, 35394048, 35405568, 35472128, 35495424, 35502338]
+            }
+        ]
+    };
+
+    var myBar = new Chart(ctx).Bar(data, {
+        responsive: true,
+        showTooltips: false,
+        scaleLabel: function(label){return  label.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");},
+        onAnimationComplete: function () {
+
+            var ctx = this.chart.ctx;
+            ctx.font = this.scale.font;
+            ctx.fillStyle = this.scale.textColor;
+            ctx.textAlign = "center";
+            ctx.textBaseline = "bottom";
+
+            var old_height = 0;
+
+            this.datasets.forEach(function (dataset) {
+                dataset.bars.forEach(function (bar) {
+                    var abs = Math.round(Math.abs(old_height - (bar.y)));
+
+                    if (abs < 10) {
+                        height = bar.y - 25;
+                    }
+                    else {
+                        height = bar.y - 5;
+                    }
+
+                    ctx.fillText(bar.value.numberFormat(0), bar.x, height);
+
+                    old_height = height;
+                });
+            })
+        }
+    });
+
+    Number.prototype.numberFormat = function(c, d, t){
+        var n = this,
+            c = isNaN(c = Math.abs(c)) ? 2 : c,
+            d = d == undefined ? "." : d,
+            t = t == undefined ? "," : t,
+            s = n < 0 ? "-" : "",
+            i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+            j = (j = i.length) > 3 ? j % 3 : 0;
+        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    };
+</script>
 
 </body>
 </html>
