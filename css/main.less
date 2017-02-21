@@ -15,8 +15,7 @@ body {
     height: 100%;
     text-align: center;
     position: fixed;
-    width: calc(~"100% * 3 / 12");
-    background: url("../image/sidebar-bg.jpg") no-repeat;
+    background: url("../image/sidebar-bg.jpg") top left no-repeat;
     background-size: cover;
 
     .logo {
@@ -142,8 +141,8 @@ body {
 }
 
 .content {
-    background-image: url('../image/background.jpg');
-    background-size: cover;
+    background: url('../image/background.jpg') right bottom no-repeat;
+    background-size: 100%;
 
     article {
         .article-title {
@@ -182,6 +181,27 @@ body {
 
         .chart {
             margin-bottom: 20px;
+        }
+
+        .bar-legend,
+        .line-legend {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin-right: 20px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            span {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+            }
         }
     }
 
