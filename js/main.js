@@ -199,12 +199,14 @@ function twoBar(id)
             datasets: [
                 {
                     label: jsonLabel.label1,
-                    fillColor: gradient1, // Put the gradient here as a fill color
+                    //fillColor: gradient1, // Put the gradient here as a fill color
+                    fillColor: color3.from, // Put the gradient here as a fill color
                     data: values1
                 },
                 {
                     label: jsonLabel.label2,
-                    fillColor: gradient2, // Put the gradient here as a fill color
+                    //fillColor: gradient2, // Put the gradient here as a fill color
+                    fillColor: color1.from, // Put the gradient here as a fill color
                     data: values2
                 }
             ]
@@ -277,6 +279,8 @@ function threeBar(id)
     gradient1.addColorStop(0, "#008EBF");
     gradient1.addColorStop(1, "#10A8DB");
 
+    console.log(gradient1);
+
     var gradient2 = chart.createLinearGradient(0, chartHeight, 0, chartHeight * 2);
     gradient2.addColorStop(0, "#CB125A");
     gradient2.addColorStop(1, "#FC1187");
@@ -308,20 +312,20 @@ function threeBar(id)
             datasets: [
                 {
                     label: jsonLabel.label1,
-                    fillColor: gradient1, // Put the gradient here as a fill color
-                    strokeColor: "#008EBF",
+                    //fillColor: gradient1, // Put the gradient here as a fill color
+                    fillColor: color3.from,
                     data: values1
                 },
                 {
                     label: jsonLabel.label2,
-                    fillColor: gradient2, // Put the gradient here as a fill color
-                    strokeColor: "#FC1187",
+                    //fillColor: gradient2, // Put the gradient here as a fill color
+                    fillColor: color1.from,
                     data: values2
                 },
                 {
                     label: jsonLabel.label3,
-                    fillColor: gradient3, // Put the gradient here as a fill color
-                    strokeColor: "#04914E",
+                    //fillColor: gradient3, // Put the gradient here as a fill color
+                    fillColor: color2.from,
                     data: values3
                 }
             ]
@@ -356,7 +360,6 @@ function threeBar(id)
             {
                 return label.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             },
-            legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
             onAnimationComplete: function ()
             {
                 if ($(window).width() > 767)
