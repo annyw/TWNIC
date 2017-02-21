@@ -1,0 +1,19 @@
+{
+    "label": {
+        "label1": "12歲以上寬頻人口數",
+        "label2": "12歲以上上網人口數",
+        "label3": "全體上網人口數"
+    },
+    "data": [
+        {"label": "2007", "value1": 1240, "value2": 1327, "value3": 1523},
+        {"label": "2008", "value1": 1255, "value2": 1356, "value3": 1555},
+        {"label": "2009", "value1": 1329, "value2": 1419, "value3": 1582},
+        {"label": "2010", "value1": 1359, "value2": 1467, "value3": 1622},
+        {"label": "2011", "value1": 1435, "value2": 1539, "value3": 1695},
+        {"label": "2012", "value1": 1530, "value2": 1594, "value3": 1753},
+        {"label": "2013", "value1": 1609, "value2": 1645, "value3": 1798},
+        {"label": "2014", "value1": 1612, "value2": 1623, "value3": 1764},
+        {"label": "2015", "value1": 1748, "value2": 1757, "value3": 1883},
+        {"label": "2016", "value1": 1873, "value2": 1881, "value3": 1993}
+    ]
+}
