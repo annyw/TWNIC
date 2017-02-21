@@ -1,0 +1,18 @@
+{
+    "label": {
+        "label1": "寬頻上網家戶數",
+        "label2": "上網家戶數"
+    },
+    "data": [
+        {"label": "2007", "value1": 493, "value2": 551},
+        {"label": "2008", "value1": 496, "value2": 541},
+        {"label": "2009", "value1": 497, "value2": 564},
+        {"label": "2010", "value1": 525, "value2": 585},
+        {"label": "2011", "value1": 569, "value2": 620},
+        {"label": "2012", "value1": 641, "value2": 653},
+        {"label": "2013", "value1": 688, "value2": 694},
+        {"label": "2014", "value1": 698, "value2": 702},
+        {"label": "2015", "value1": 747, "value2": 750},
+        {"label": "2016", "value1": 740, "value2": 745}
+    ]
+}

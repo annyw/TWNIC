@@ -1,0 +1,17 @@
+{
+    "label": {
+        "label1": "12歲以上行動上網人口數",
+        "label2": "12歲以上無線上網人口數"
+    },
+    "data": [
+        {"label": "2008", "value1": 157, "value2": 573},
+        {"label": "2009", "value1": 227, "value2": 584},
+        {"label": "2010", "value1": 328, "value2": 704},
+        {"label": "2011", "value1": 383, "value2": 730},
+        {"label": "2012", "value1": 630, "value2": 692},
+        {"label": "2013", "value1": 927, "value2": 1225},
+        {"label": "2014", "value1": 1003, "value2": 1277},
+        {"label": "2015", "value1": 1448, "value2": 1641},
+        {"label": "2016", "value1": 1448, "value2": 1641}
+    ]
+}

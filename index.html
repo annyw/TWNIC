@@ -5,212 +5,448 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
     <title>Twnic 台灣網路基礎建設概要</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <!--navigation-->
-<div class="sidebar">
-    <div class="container-fluid">
-        <a class="logo" href="">
-            <img src="./image/logo.svg" alt="">
-            <div class="logo-text">
-                <span>台灣網路基礎建設概要</span>
-                <div>Internet Infrastructure in Taiwan:
-                    A Monthly Summary
+<div class="container-fluid">
+    <div class="row">
+        <div class="sidebar col-md-3">
+            <a class="logo" href="">
+                <img src="./image/logo.svg" alt="">
+                <div class="logo-text">
+                    <h1>台灣網路基礎建設概要</h1>
+                    <div>Internet Infrastructure in Taiwan:
+                        A Monthly Summary
+                    </div>
                 </div>
-            </div>
-        </a>
-        <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
+            </a>
+            <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-        <div class=" menu-list">
-            <ul class="menu collapse" id="collapse">
-                <li>
-                    <a href="#">
-                        <span>「.tw/.台灣」網域名稱註冊數量統計</span>
-                        <div class="menu-xs"> .tw/.台灣 Domain Names</div>
-                    </a>
-                </li>
-                <li>
-                    <a class="active" href="#">
-                        <span>IP位址及AS號碼數量統計</span>
-                        <div class="menu-xs">IP Addresses and AS Numbers</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>.tw WWW Serve數量統計</span>
-                        <div class="menu-en">.tw WWW Servers</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span> 連線頻寬統計</span>
-                        <div class="menu-xs">Internet Connection Bandwidth</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>上網人口及家戶數統計</span>
-                        <div class="menu-xs">Internet Users and Households with Internet Access</div>
-                    </a>
-                </li>
-                <li>
-                    <a class="print hidden-sm hidden-xs">
-                        <img src="./image/print-icon.png" alt="" style="width: 16px; height: auto">
-                        友善列印
-                    </a>
-                    <div class="menu-xs">資料更新日期：2016/01</div>
-                </li>
-            </ul>
+            <div class=" menu-list">
+                <ul class="menu collapse" id="collapse" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#domain" aria-controls="domain" role="tab" data-toggle="tab">
+                            <span>「.tw/.台灣」網域名稱註冊數量統計</span>
+                            <div class="menu-xs"> .tw/.台灣 Domain Names</div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#ip-address" aria-controls="ip-address" role="tab" data-toggle="tab">
+                            <span>IP位址及AS號碼數量統計</span>
+                            <div class="menu-xs">IP Addresses and AS Numbers</div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#www-server" aria-controls="www-server" role="tab" data-toggle="tab">
+                            <span>.tw WWW Serve數量統計</span>
+                            <div class="menu-en">.tw WWW Servers</div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#bandwidth" aria-controls="bandwidth" role="tab" data-toggle="tab">
+                            <span>連線頻寬統計</span>
+                            <div class="menu-xs">Internet Connection Bandwidth</div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#users" aria-controls="users" role="tab" data-toggle="tab">
+                            <span>上網人口及家戶數統計</span>
+                            <div class="menu-xs">Internet Users and Households with Internet Access</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="print-btn" class="print hidden-sm hidden-xs">
+                            <img src="./image/print-icon.png" alt="" style="width: 16px; height: auto">
+                            友善列印
+                        </a>
+                        <div class="menu-xs">資料更新日期：2017/01</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-9 col-md-offset-3 content">
+            <div class="tab-content">
+                <article role="tabpanel" class="tab-pane fade in active" id="domain">
+                    <div class="row block">
+                        <div class="col-md-12">
+                            <div class="article-title">
+                                <h3>「.tw/.台灣」網域名稱註冊數量統計</h3>
+                                <h5>.tw/.台灣 Domain Names</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <canvas id="chart1"></canvas>
+                                <div>
+                                    圖1：「.tw/.台灣」網域名稱註冊數量統計 (單位:個)<br>Figure 1：Number of“.tw/.台灣”Domain Name Registrations
+                                </div>
+                            </div>
+                            <div class="chart">
+                                <canvas id="chart2"></canvas>
+                                <div>
+                                    圖2:「.tw」英文網域名稱註冊數量統計(單位:個)<br>Figure 2: Number of“.tw”English Domain Name Registrations
+                                </div>
+                            </div>
+                            <div class="chart">
+                                <canvas id="chart3"></canvas>
+                                <div>
+                                    圖3:「.tw/.台灣」中文網域名稱註冊數量統計(單位:個)<br>Figure 3: Number of“.tw/.台灣”Chinese IDN Domain Name Registrations
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                在網路上的每一台電腦都有一組稱為IP(Internet Protocol)的位址，例如211.72.211.7，但因不易記憶，所以網域名稱(Domain Name)以簡單的字串如twnic.net.tw來代表這一組IP位址。截至105年12月底止，「.tw/.台灣」網域名稱註冊總量已達734,582。
+                            </p>
+                            <p>
+                                Every computer on the Internet has a unique Internet Protocol (IP) address, for example, the IP Address 211.72.211.7 is not easy to remember. The Domain Name System makes using the Internet easier by allowing a familiar string of letters like twnic.net.tw to be used instead of the IP address.
+                            </p>
+                            <p>
+                                As of December 2016 a total of 734,582“.tw/.台灣”domain names were registered (See Figure1).
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article role="tabpanel" class="tab-pane fade" id="ip-address">
+                    <div class="row block">
+                        <div class="col-md-12">
+                            <div class="article-title">
+                                <h3>IP位址及AS號碼數量統計</h3>
+                                <h5>IP Addresses and AS Numbers</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <canvas id="chart4"></canvas>
+                                <div>
+                                    圖4：台灣IPv4位址數量統計 (單位:個)<br>Figure 4：Number of IPv4 Addresses
+                                </div>
+                            </div>
+                            <div class="chart">
+                                <canvas id="chart5"></canvas>
+                                <div>
+                                    圖5：台灣IPv6位址數量統計 (單位:/32個)【備註】單位:/32，等於2<sup>96</sup>，約為7.9x10<sup>28</sup>個<br>Figure 5：Number of IPv6 Addresses (/32=2<sup>96</sup>≒7.9x10<sup>28</sup>)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                網際網路通訊協定位址(Internet Protocol Address)是用來辨識網際網路上主機位置所在，以固定且唯一的一串數字位址分配予主機。台灣IP位址核發數量，在IPv4位址發放數量統計上，台灣居全球第15名; IPv6位址發放數量為全球第18名。
+                            </p>
+                            <p>
+                                Internet Protocol Address is a numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication.
+                            </p>
+                            <p>
+                                The allocations of IPv4 and IPv6 addresses are shown in Figure 4 and Figure 5. In the global ranking of IPv4 and IPv6 allocations, Taiwan ranks the 15th and 18th respectively.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <canvas id="chart6"></canvas>
+                                <div>
+                                    圖6：台灣ASN核發數量統計 (單位:個)<br>Figure 6：Number of AS Numbers
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                自治系統號碼(ASN)是一個提供自治系統(AS)間交換動態路由資訊的唯一識別碼，截至105年12月國內自治系統號碼核發數為345個。
+                            </p>
+                            <p>
+                                Autonomous System Numbers (ASN) are unique identifiers for a collection of networks, or routers that share a common set of routing policies.
+                            </p>
+                            <p>
+                                As of December 2016 the total number of AS Numbers was 345 (See Figure 6).
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article role="tabpanel" class="tab-pane fade" id="www-server">
+                    <div class="row block">
+                        <div class="col-md-12">
+                            <div class="article-title">
+                                <h3>.tw WWW Serve數量統計</h3>
+                                <h5>.tw WWW Servers</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <canvas id="chart7"></canvas>
+                                <div>
+                                    圖7：.tw WWW Server數統計 (單位:台)<br>Figure 7：Number of .tw WWW Servers
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                .tw WWW Server數量截至106年1月底共計有164,098台WWW Server。
+                            </p>
+                            <p>
+                                By the end of January 2017 the number of .tw WWW Servers is 164,098 (See Figure 7).
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article role="tabpanel" class="tab-pane fade" id="bandwidth">
+                    <div class="row block">
+                        <div class="col-md-12">
+                            <div class="article-title">
+                                <h3>連線頻寬統計</h3>
+                                <h5>Internet Connection Bandwidth</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <canvas id="chart8"></canvas>
+                                <div>
+                                    圖8：台灣對外連線總頻寬統計 (單位:Mbps)<br>Figure 8：International Internet Connection Bandwidth (Mbps)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                「台灣網際網路連線頻寬調查」結果顯示，於106年1月公布之我國對外連線總頻寬達 2,066,199Mbps。
+                            </p>
+                            <p>
+                                The Taiwan Internet Connection Bandwidth Survey shows that the total International Internet connection bandwidth reached 2,066,199Mbps by the end of December 2016.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <table class="table table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th width="5%">項目<br>NO</th>
+                                        <th>連線調查單位<br>Name</th>
+                                        <th>國內互連總頻寬<br>Bandwidth</th>
+                                        <th width="5%">項目<br>NO</th>
+                                        <th>連線調查單位<br>Name</th>
+                                        <th>國內互連總頻寬<br>Bandwidth</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>速博NCIC</td>
+                                        <td>1,179,029</td>
+                                        <td>6</td>
+                                        <td>遠傳電信FETnet</td>
+                                        <td>601,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>台灣固網TFN</td>
+                                        <td>1,096,236</td>
+                                        <td>7</td>
+                                        <td>台灣大哥大Taiwan Mobile</td>
+                                        <td>560,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>中嘉和網CNS-KBT</td>
+                                        <td>1,059,400</td>
+                                        <td>8</td>
+                                        <td>台灣網際網路交換中心TWIX</td>
+                                        <td>534,731</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>中嘉寬頻Ke-ing</td>
+                                        <td>873,000</td>
+                                        <td>9</td>
+                                        <td>中研院ASNet</td>
+                                        <td>248,460</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>中華電信HiNet</td>
+                                        <td>639,256</td>
+                                        <td>10</td>
+                                        <td>教育部TANet</td>
+                                        <td>246,965</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    表1：國內互連總頻寬統計前10大單位 (單位:Mbps)<br>Table 1：Domestic Internet Connection Bandwidth (Mbps)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                國內各連線單位互連頻寬方面，於106年1月公布的相關數據呈現成長狀態，國內網路持續活躍。
+                            </p>
+                            <p>
+                                Domestic Internet Connection Bandwidth among local ISPs shows steady growth, according to the survey’s result in December 2016 (See Table 1).
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article role="tabpanel" class="tab-pane fade" id="users">
+                    <div class="row block">
+                        <div class="col-md-12">
+                            <div class="article-title">
+                                <h3>上網人口及家戶數統計</h3>
+                                <h5>Internet Users and Households with Internet Access</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <div id="chart9-legend"></div>
+                                <canvas id="chart9"></canvas>
+                                <div>
+                                    圖9：台灣上網人口統計 (單位:萬人)<br>Figure 9：Internet Users in Taiwan (Ten Thousands)
+                                </div>
+                            </div>
+                            <div class="chart">
+                                <div id="chart10-legend"></div>
+                                <canvas id="chart10"></canvas>
+                                <div>
+                                    圖10：台灣12歲以上行動上網與無線上網人口統計 (單位:萬人)<br>Figure 10： Mobile and Wireless Internet Users Aged 12 Years Old and Above (Ten Thousands)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                TWNIC 105年6月台灣寬頻網路使用調查結果顯示：上網有1,993萬人，上網比例為84.8%；12歲以上民眾曾經上網有1,881萬人，使用寬頻上網有1,873萬人，使用無線上網有1,641萬人，使用行動上網有1,448萬人。
+                            </p>
+                            <p>
+                                The latest Broadband Internet Usage Survey shows that there are 19.93 million Internet users in Taiwan, representing 84.88% of the total population. The number of Internet users aged 12 years old and above is 18.81 million. Among them, there are 18.73 million broadband Internet users, 16.41 million wireless Internet users and 14.48 million mobile Internet users (See Figure 9 and Figure 10).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <div id="chart11-legend"></div>
+                                <canvas id="chart11"></canvas>
+                                <div>
+                                    圖11：台灣上網家戶與寬頻上網家戶數統計 (單位:萬戶)<br>Figure 11：Households with Internet and Broadband Internet Access (Ten Thousands)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                在家戶數統計已上網家戶數達745萬戶;而寬頻上網之戶數共計740萬戶
+                            </p>
+                            <p>
+                                In terms of households with Internet access, the total number is 7.45 million. Among them, 7.40million households have broadband Internet access (See Figure 11).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <div id="chart12-legend"></div>
+                                <canvas id="chart12"></canvas>
+                                <div>
+                                    圖12：我國45歲以上民眾使用網路社群與使用即時通訊軟體 (單位:年齡、百分比)<br>Figure 12: Social Networks and Instant Message Users Aged 45 and above (Age, Percentage)
+                                </div>
+                            </div>
+                            <div class="chart">
+                                <div id="chart13-legend"></div>
+                                <canvas id="chart13"></canvas>
+                                <div>
+                                    圖13：我國60歲以上民眾使用網路社群與使用即時通訊軟體 (單位:年齡、百分比)<br>Figure 13: Social Networks and Instant Message Users Aged 60 and above (Age, Percentage)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                2016年台灣寬頻網路使用調查報告顯示，45歲以上民眾使用網路社群與使用即時通訊軟體的比例皆有增加。2015年，45歲以上網民有45.1%使用網路社群，50.7%使用即時通訊軟體。2016年，45歲以上的網民有64.4%使用網路社群，81.1%使用即時通訊軟體。另外，2015年，60歲以上的網民有40.8%使用網路社群，50.2%使用網路即時通訊軟體。2016年，60歲以上網民有55.4%使用網路社群，76.7%使用網路即時通訊軟體。
+                            </p>
+                            <p>
+                                The survey shows that both the social networks usage rate and instant message usage rate at 45 years old and beyond have increased from 2015 to 2016. In 2015, 45.1% of the internet users at 45 years old and beyond used social networks, and 50.7% of the internet users aforem-en tioned used instant messages. In 2016, 60.4% of the internet users at 45 years old and beyond used social networks, and 81.1% of the internet users aforementioned use instant messages.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row block">
+                        <div class="col-lg-8 col-md-7">
+                            <div class="chart">
+                                <div id="chart14-legend"></div>
+                                <canvas id="chart14"></canvas>
+                                <div>
+                                    圖14：各類行動用戶數成長統計 (單位:萬戶)<br>Figure 14：Mobile Service Subscribers (Ten Thousands) Source: NCC
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p>
+                                國家通訊傳播委員會(NCC)以業者回報統計資料顯示(105年11月)行動通信用戶數達2,851萬戶
+                            </p>
+                            <p>
+                                Statistics from the National Communications Commission (NCC) show that by the end of November 2016 the number of mobile subscribers is 28.51 million (See Figure 13). NCC’s data is collected based on the feedback reports from mobile service providers. Please visit http://www.ncc.gov.tw for more information.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <footer>
+                <div class="footer-content row">
+                    <div class="col-md-3">
+                        <img src="./image/logo-b.svg" alt="">
+                        <div class="footer-contact">
+                            <p>財團法人台灣網路資訊中心
+                                <br>臺北市羅斯福路二段9號4樓之2
+                                <br>Tel：+886-2-2341-3300
+                                <br>Fax：+886-2-2396-8832
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="footer-intro">
+                            <p>
+                                台灣網路資訊中心以台灣網路基礎建設為主軸，進行長期與系統性之調查與研究，彙集重要統計資訊，並統整TWNIC核心業務DN、IP相關統計數據，協助民眾快速了解我國網路重要數據，掌握我國網路使用現況與整體發展。
+                            </p>
+                            <p>
+                                The Taiwan Network Information Center (TWNIC) conducts surveys and researches on Taiwan’s Internet infrastructure on a long term basis, bringing together important statistics on the use of the Internet.
+                            </p>
+                            <p>
+                                Combined with TWNIC’s core businesses, such as statistics of domain name registrations and IP address allocations, “Internet Infrastructure in Taiwan: A Monthly Summary” aims to help the public learn more about the current development of the Internet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
         </div>
     </div>
 </div>
 
-<div class="col-md-9 col-md-offset-3 content">
-    <article>
-        <div class="row block">
-            <div class="col-md-12">
-                <div class="article-title">
-                    <h3>IP位址及AS號碼數量統計</h3>
-                    <h5>IP Addresses and AS Numbers </h5>
-                </div>
-            </div>
-        </div>
-        <div class="row block">
-            <div class="col-lg-8 col-md-7">
-                <div id="myfirstchart">
-                    <canvas id="myChart"></canvas>
-                </div>
-                <div>
-                    圖4：台灣IPv4位址數量統計（單位：個）<br>Figure4：Number of IPv4 Addresses
-                </div>
-                <img src="./image/chart.jpg" alt="" style="width: 100%;">
-            </div>
-            <div class="col-lg-3 col-md-4">
-                <p>網際網路通訊協定位址(Internet Protocol Address)是用來辨識網際網路上主機位
-                    置所在，以固定且唯一的一串數字位址分配予主機。台灣IP位址核發數量，在
-                    IPv4位址發放數量統計上，台灣居全球第15名; IPv6位址發放數量為全球第18名。
-                </p>
-                <p>
-                    Internet Protocol Address is a numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication.
-                    The allocations of IPv4 and IPv6 addresses are shown in Figure 4 and Figure 5. In the global ranking of IPv4 and IPv6 allocations, Taiwan ranks the 13th and 17th respectively. </p>
-            </div>
-        </div>
-        <div class="row block">
-            <div class="col-lg-8 col-md-7">
-                <img src="./image/chart.jpg" alt="" style="width: 100%;">
-            </div>
-            <div class="col-lg-3 col-md-4">
-                <p>自治系統號碼(ASN)是一個提供自治系統(AS)間交換動態路由資訊的唯一識別碼，截至105年11月國內自治系統號碼核發數為345個。
-                </p>
-                <p>
-                    Autonomous System Numbers (ASN) are unique identifiers for a collection of networks, or routers that share a common set of routing policies.
-                    As of November 2016 the total number of AS Numbers was 345 (See Figure 6)</p>
-            </div>
-        </div>
-    </article>
-
-    <footer>
-        <div class="footer-content row">
-            <div class="col-md-3">
-                <img src="./image/logo-b.svg" alt="">
-                <div class="footer-contact">
-                    <p>財團法人台灣網路資訊中心
-                        <br>臺北市羅斯福路二段9號4樓之2
-                        <br>Tel：+886-2-2341-3300
-                        <br>Fax：+886-2-2396-8832
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div class="footer-intro">
-                    <p>台灣網路資訊中心以台灣網路基礎建設為主軸，進行長期與系統性之調查與研究，彙集重要統計資訊，並統整TWNIC核心業務DN、IP相關統計數據，協助民眾快速了解我國網路重要數據，掌握我國網路使用現況與整體發展。
-                        <br>The Taiwan Network Information Center (TWNIC) conducts surveys and researches on Taiwan’s Internet infrastructure on a long term basis, bringing together important statistics on the use of the Internet.
-                        <br>Combined with TWNIC’s core businesses, such as statistics of domain name registrations and IP address allocations, “Internet Infrastructure in Taiwan: A Monthly Summary” aims to help the public learn more about the current development of the Internet.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="lib/jquery/js/jquery-3.1.1.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="lib/chartjs/Chart.min.js"></script>
 
-<!-- Chart.js -->
-<script>
-    var ctx = document.getElementById("myChart").getContext("2d");
-
-    var chartHeight = $(window).height() / 6;
-
-    var gradient = ctx.createLinearGradient(0, chartHeight, 0, chartHeight * 2);
-    gradient.addColorStop(0, 'rgba(151, 204, 70, 1)');
-    gradient.addColorStop(1, 'rgba(11, 118, 50, 1)');
-
-    var data = {
-        labels: ["2006/12", "2007/12", "2008/12", "2009/12", "2010/12", "2011/12", "2012/12", "2013/12", "2014/12", "2015/12", "2016/12"],
-        datasets: [
-            {
-                fillColor  : gradient, // Put the gradient here as a fill color
-                data: [17888000, 19832576, 24004864, 27102208, 31925760, 35381504, 35394048, 35405568, 35472128, 35495424, 35502338]
-            }
-        ]
-    };
-
-    var myBar = new Chart(ctx).Bar(data, {
-        responsive: true,
-        showTooltips: false,
-        scaleLabel: function(label){return  label.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");},
-        onAnimationComplete: function () {
-
-            var ctx = this.chart.ctx;
-            ctx.font = this.scale.font;
-            ctx.fillStyle = this.scale.textColor;
-            ctx.textAlign = "center";
-            ctx.textBaseline = "bottom";
-
-            var old_height = 0;
-
-            this.datasets.forEach(function (dataset) {
-                dataset.bars.forEach(function (bar) {
-                    var abs = Math.round(Math.abs(old_height - (bar.y)));
-
-                    if (abs < 10) {
-                        height = bar.y - 25;
-                    }
-                    else {
-                        height = bar.y - 5;
-                    }
-
-                    ctx.fillText(bar.value.numberFormat(0), bar.x, height);
-
-                    old_height = height;
-                });
-            })
-        }
-    });
-
-    Number.prototype.numberFormat = function(c, d, t){
-        var n = this,
-            c = isNaN(c = Math.abs(c)) ? 2 : c,
-            d = d == undefined ? "." : d,
-            t = t == undefined ? "," : t,
-            s = n < 0 ? "-" : "",
-            i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
-            j = (j = i.length) > 3 ? j % 3 : 0;
-        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
-    };
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
